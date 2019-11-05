@@ -1,3 +1,9 @@
+//Game by ©Ken Chen 2019
+//kenchendesigns.com
+//Customers illustration, Michael Myers, https://drawsgood.com/persona-4-pixel-characters
+//Player illustration, blackzen@huaban, https://huaban.com/pins/466720986/
+//Grocery illustration, lovelylatte@Spoonflower, https://www.spoonflower.com/en/products/1218545-super-mini-pixel-foods-by-lovelylatte
+
 int round=0;
 int screen=0;
 Player p;
@@ -80,11 +86,7 @@ void endScreen() {
   if (p.win()) {
     image(loadImage("win.png"), 500, 500);
     timer=1;
-    if(mousePressed&&mouseX>=156&&mouseX<=844&&mouseY>=508&&mouseY<=617) newGame();
+    if (mousePressed&&mouseX>=156&&mouseX<=844&&mouseY>=508&&mouseY<=617) newGame();
   }
   if (p.lose()) image(loadImage("lose.png"), 500, 500);
 }
-
-//Customers illustration, Michael Myers, https://drawsgood.com/persona-4-pixel-characters
-//Player illustration, blackzen@huaban, https://huaban.com/pins/466720986/
-//Grocery illustration, lovelylatte@Spoonflower, https://www.spoonflower.com/en/products/1218545-super-mini-pixel-foods-by-lovelylatte

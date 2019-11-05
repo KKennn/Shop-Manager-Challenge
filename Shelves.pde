@@ -23,7 +23,7 @@ class Shelves {
     placeItems(m, 975, 650, "vertical");
   }
   void placeItems(PImage img, int x, int y, String direction) {
-    if (direction=="vertical") for (int i=50;i<=250;i+=50) image(img,x,y+i);
-    if (direction=="horizontal") for (int i=50;i<=250;i+=50) image(img,x+i,y);
+    if (direction=="vertical") for (int i=50; i<=250; i+=50) image(img, x, y+i);
+    if (direction=="horizontal") for (int i=50; i<=250; i+=50) image(img, x+i, y);
   }
 }

@@ -1,7 +1,6 @@
 class Player {
   float xPos, yPos;
-  boolean corns, tomatoes, grapes, bananas, milk, carrots;
-  boolean coever, tever, gever, bever, mever, caever;
+  boolean corns, tomatoes, grapes, bananas, milk, carrots, coever, tever, gever, bever, mever, caever;
   String sentence;
   int itemNum;
   Player() {
@@ -30,12 +29,12 @@ class Player {
     if (xPos>=890&&xPos<=930&&yPos>=650&&yPos<=950) milk=true;
   }
   void display() {
-    if(checkItem(corns, coever, "corns")) coever=true;
-    if(checkItem(carrots, caever, "carrots")) caever=true;
-    if(checkItem(grapes, gever, "grapes")) gever=true;
-    if(checkItem(tomatoes, tever, "tomatoes")) tever=true;
-    if(checkItem(milk, mever, "milk")) mever=true;
-    if(checkItem(bananas, bever, "bananas")) bever=true;
+    if (checkItem(corns, coever, "corns")) coever=true;
+    if (checkItem(carrots, caever, "carrots")) caever=true;
+    if (checkItem(grapes, gever, "grapes")) gever=true;
+    if (checkItem(tomatoes, tever, "tomatoes")) tever=true;
+    if (checkItem(milk, mever, "milk")) mever=true;
+    if (checkItem(bananas, bever, "bananas")) bever=true;
     fill(255);
     textAlign(CENTER);
     textSize(24);
