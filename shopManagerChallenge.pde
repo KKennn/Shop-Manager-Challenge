@@ -9,11 +9,12 @@ int screen=0;
 Player p;
 Customer c;
 Shelves s;
-PImage player, b, ca, co, g, m, t;
+PImage player, b, ca, co, g, m, t, i;
 PImage customers[]=new PImage[5];
 String grocery[]={"corns", "tomatoes", "grapes", "bananas", "carrots", "milk"};
 String g1, g2, g3;
 int timer=30;
+boolean instruction=true;
 
 void setup() {
   size(1000, 1000);
@@ -66,7 +67,8 @@ void newGame() {
 }
 
 void startScreen() {
-  image(loadImage("startscreen.png"), 500, 500);
+  if (mouseX>=90&&mouseX<=431&&mouseY>=806&&mouseY<=914) image(loadImage("startscreen-hover.png"), 500, 500);
+  else image(loadImage("startscreen.png"), 500, 500);
 }
 
 void gameScreen() {
@@ -80,13 +82,18 @@ void gameScreen() {
   s.create();
   if (screen==1&&p.win()) endScreen();
   if (screen==1&&p.lose()) screen=2;
+  if (instruction) image(loadImage("move.png"), 500, 700);
 }
 
 void endScreen() {
   if (p.win()) {
-    image(loadImage("win.png"), 500, 500);
+    if (mouseX>=156&&mouseX<=844&&mouseY>=508&&mouseY<=617) image(loadImage("win-hover.png"), 500, 500);
+    else image(loadImage("win.png"), 500, 500);
     timer=1;
     if (mousePressed&&mouseX>=156&&mouseX<=844&&mouseY>=508&&mouseY<=617) newGame();
   }
-  if (p.lose()) image(loadImage("lose.png"), 500, 500);
+  if (p.lose()) {
+    if (mouseX>=156&&mouseX<=844&&mouseY>=508&&mouseY<=617) image(loadImage("lose-hover.png"), 500, 500);
+    else image(loadImage("lose.png"), 500, 500);
+  }
 }

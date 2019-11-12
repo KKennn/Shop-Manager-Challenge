@@ -14,6 +14,7 @@ class Player {
   }
   void move() {
     if (keyPressed) {
+      instruction=false;
       if (keyCode==UP&&yPos>280) yPos-=5+round*1.5;
       if (keyCode==DOWN&&yPos<910) yPos+=5+round*1.5;
       if (keyCode==LEFT&&xPos>80) xPos-=5+round*1.5;
